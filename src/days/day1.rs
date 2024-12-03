@@ -30,7 +30,7 @@ pub(crate) fn day1() -> Result<(), std::io::Error> {
 
 pub(crate) fn day1_part2() -> Result<(), std::io::Error> {
     let file = File::open("data/d1.txt")?;
-    let (mut list1, mut list2): (Vec<i32>, Vec<i32>) = BufReader::new(file)
+    let (mut list1, list2): (Vec<i32>, Vec<i32>) = BufReader::new(file)
         .lines()
         .map(|line| line.unwrap())
         .map(|line| {
